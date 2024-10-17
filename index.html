@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>LOOM</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">LOOM</div>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search..." required />
+            <button type="submit">Search</button>
+        </form>
+        <div class="category-banner">
+            <ul>
+                <li>threads</li>
+                <li>weaves</li>
+                <li>knots</li>
+                <li>spools</li>
+                <li>fiber feeds</li>
+                <li>tangles</li>
+                <li>stitches</li>
+                <li>loose ends</li>
+                <li>patterns</li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="diagonal-content">
+        <div class="content-box" id="box1">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWl6eXlra3UyamVhZ2xlcTFxdjV1aDFkY2ZoYmlvM3pjdzRoYmJnYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/xUOwG2afhahtxcAXwk/giphy.webp"
+                onclick="showVideo('box1', 'qvC2bVa7UX4')">
+        </div>
+        <div class="content-box" id="box2">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzlsa3dxMmRjZDJvcTVreG4yNGMzOHU4ejdoZnFjaHNsaWJkYTF3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26DNhgafz5MoJ4mLm/giphy.webp"
+                onclick="showVideo('box2', 'YpFZDcyUlMw')">
+        </div>
+        <div class="content-box" id="box3">
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYW8zdzZvejltN2U4enpqOWM2Z3ZvdGZ3djhwMXZycDNmeHc2ODN1aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/xThtaxfkYJtctPYSVG/giphy.webp"
+                onclick="showVideo('box3', 'OkBTYrZ1eSo')">
+        </div>
+        <div class="content-box" id="box4">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTZvcHlucWZ4eHlycTE1em1xaGJwdmE2NG16NHNmMTA3dHFxaGhqbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26ndGtrEMtTEHOSME/giphy.webp"
+                onclick="showVideo('box4', 'XEvg_kBYcl8')">
+        </div>
+        <div class="content-box" id="box5">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ250OGZmeDZlYjA2MWcwYzk4dnU0cmpwdWh6Y2tzaWh1dmdwN3liYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/xUOwG4Y4Un1NGNaVEI/giphy.webp"
+                onclick="showVideo('box5', 'HR1orAlitks')">
+        </div>
+        <div class="content-box" id="box6">
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGNsbjNvdHptb3gzZXdhcHE0NnV1NG56NW40cTZ1d211cTNlanUwMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/l4pT5vL6HrK1FnpAI/giphy.webp"
+                onclick="showVideo('box6', 'At_Xf7AlNkQ')">
+        </div>
+    </div>
+
+    <div id="video-popup" style="display:none; position:fixed; z-index:1000;">
+        <button id="close-btn" style="position:absolute; top:10px; right:10px; z-index:1001;">Close</button>
+        <iframe id="youtube-video" width="460" height="215" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="container">
+        <main class="main-content">
+            <h2>Thread of Time</h2>
+            <div class="shorts-container" id="shortsContainer">
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2tkNXo3N2xtdmlncTRnczdha2t1M3kyd3N2NDN5MnllM3QzamMwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JoVV55m3KZHdxlpFZ6/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why is food good?</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2o2YmV3eG1jZ3FyYWN3dWJjYjh4cXlrYzVhOGsyYjJlaHkxd3hlcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mqtPFS4fEW092wPa9b/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>let's chat!</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExamVuazFqdDI0ZmpvcXg4MG4yN2EyOHN4bDcxMHhsZDAxOXk0bzhyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Byour3OgR0nWnRR6Tc/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>tv sucks.</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdjNHVpbWF5ZmIzbWJ3OXlsMnd2cGk2MTd4Z242OHF6b21mZDcxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CGZGV8wix4lvJn3dxy/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why are you online?</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmNla2M3bGg0bHF3aTdvcmU2NHc1MGtxeDVicXA3NHV6ZGcwZ3FrNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1nbweFkb6kqVhNCwJ4/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>me sleeping :)</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2tkNXo3N2xtdmlncTRnczdha2t1M3kyd3N2NDN5MnllM3QzamMwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JoVV55m3KZHdxlpFZ6/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why is food good</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2o2YmV3eG1jZ3FyYWN3dWJjYjh4cXlrYzVhOGsyYjJlaHkxd3hlcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mqtPFS4fEW092wPa9b/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>let's chat!</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExamVuazFqdDI0ZmpvcXg4MG4yN2EyOHN4bDcxMHhsZDAxOXk0bzhyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Byour3OgR0nWnRR6Tc/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>tv sucks.</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdjNHVpbWF5ZmIzbWJ3OXlsMnd2cGk2MTd4Z242OHF6b21mZDcxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CGZGV8wix4lvJn3dxy/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why are you online?</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmNla2M3bGg0bHF3aTdvcmU2NHc1MGtxeDVicXA3NHV6ZGcwZ3FrNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1nbweFkb6kqVhNCwJ4/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>me sleeping :)</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2tkNXo3N2xtdmlncTRnczdha2t1M3kyd3N2NDN5MnllM3QzamMwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JoVV55m3KZHdxlpFZ6/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why is food good</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2o2YmV3eG1jZ3FyYWN3dWJjYjh4cXlrYzVhOGsyYjJlaHkxd3hlcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mqtPFS4fEW092wPa9b/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>let's chat!</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExamVuazFqdDI0ZmpvcXg4MG4yN2EyOHN4bDcxMHhsZDAxOXk0bzhyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Byour3OgR0nWnRR6Tc/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>tv sucks.</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdjNHVpbWF5ZmIzbWJ3OXlsMnd2cGk2MTd4Z242OHF6b21mZDcxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CGZGV8wix4lvJn3dxy/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why are you online?</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmNla2M3bGg0bHF3aTdvcmU2NHc1MGtxeDVicXA3NHV6ZGcwZ3FrNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1nbweFkb6kqVhNCwJ4/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>me sleeping :)</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2tkNXo3N2xtdmlncTRnczdha2t1M3kyd3N2NDN5MnllM3QzamMwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JoVV55m3KZHdxlpFZ6/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why is food good</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2o2YmV3eG1jZ3FyYWN3dWJjYjh4cXlrYzVhOGsyYjJlaHkxd3hlcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mqtPFS4fEW092wPa9b/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>let's chat!</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExamVuazFqdDI0ZmpvcXg4MG4yN2EyOHN4bDcxMHhsZDAxOXk0bzhyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Byour3OgR0nWnRR6Tc/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>tv sucks.</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdjNHVpbWF5ZmIzbWJ3OXlsMnd2cGk2MTd4Z242OHF6b21mZDcxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CGZGV8wix4lvJn3dxy/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why are you online?</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmNla2M3bGg0bHF3aTdvcmU2NHc1MGtxeDVicXA3NHV6ZGcwZ3FrNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1nbweFkb6kqVhNCwJ4/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>me sleeping :)</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2tkNXo3N2xtdmlncTRnczdha2t1M3kyd3N2NDN5MnllM3QzamMwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JoVV55m3KZHdxlpFZ6/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why is food good</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2o2YmV3eG1jZ3FyYWN3dWJjYjh4cXlrYzVhOGsyYjJlaHkxd3hlcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mqtPFS4fEW092wPa9b/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>let's chat!</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExamVuazFqdDI0ZmpvcXg4MG4yN2EyOHN4bDcxMHhsZDAxOXk0bzhyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Byour3OgR0nWnRR6Tc/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>tv sucks.</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdjNHVpbWF5ZmIzbWJ3OXlsMnd2cGk2MTd4Z242OHF6b21mZDcxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CGZGV8wix4lvJn3dxy/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>why are you online?</h4>
+                </div>
+                <div class="shorts-card">
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmNla2M3bGg0bHF3aTdvcmU2NHc1MGtxeDVicXA3NHV6ZGcwZ3FrNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1nbweFkb6kqVhNCwJ4/giphy.webp"
+                        alt="Shorts Thumbnail">
+                    <h4>me sleeping :)</h4>
+                </div>
+            </div>
+
+            <!-- User Profiles Section -->
+            <h2>User Profiles</h2>
+            <div class="profiles-container" id="profilesContainer">
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>pixel_voyage</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>cloud_whisperer</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>nova_rhythm</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>homebody249</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>lonelygal_6</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>me_when_i</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>heyyitsme</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>last_user_ever</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>longing_idly</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>user8812</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>pixel_voyage</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>cloud_whisperer</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>nova_rhythm</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>homebody249</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>lonelygal_6</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>me_when_i</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>heyyitsme</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>last_user_ever</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>longing_idly</h4>
+                </div>
+                <div class="profile-card">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGRvMnFhaGMxbWFjMmFtem14OXNqcXV6ZWo1cTd6cnBlOXRyMW9jciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lGnxllmN3YqOyI/giphy.webp"
+                        alt="User Profile">
+                    <h4>user8812</h4>
+                </div>
+            </div>
+
+            <h2>Echoes from the Web</h2>
+            <div class="video-grid">
+                <!-- Video cards -->
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>dreaming in space</h4>
+                    <p>gloria randall</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>how to love</h4>
+                    <p>randy sings</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>studying for life</h4>
+                    <p>why_me</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>can we live on neptune?</h4>
+                    <p>starboy</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>random things</h4>
+                    <p>laurie bern</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>feeling blue</h4>
+                    <p>danika p</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>crashed my scooter</h4>
+                    <p>lanny dune</p>
+                </div>
+                <div class="video-card" id="video8">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzl5eGJrZzA3ZGF5YmZ4cmdzZ29oMHJkNHU1NmlraW5iMmxtc21pbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JJj43H0uCP3OLBAvQW/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>are we living?</h4>
+                    <p>conspiracy_man</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>live in the now.</h4>
+                    <p>hopeful_cheese</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>going hunting</h4>
+                    <p>hunter tremble</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>living with myself</h4>
+                    <p>korei sleu</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>what is nougat?</h4>
+                    <p>cooking with moby</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>why are new sitcoms bad?</h4>
+                    <p>tv_with_sal</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>random home i found</h4>
+                    <p>house hunter uk</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>drinking wine alone</h4>
+                    <p>sharky melbourne</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>how do eyes work?</h4>
+                    <p>doctor lydia</p>
+                </div>
+                <div class="video-card" id="video17">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzl5eGJrZzA3ZGF5YmZ4cmdzZ29oMHJkNHU1NmlraW5iMmxtc21pbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JJj43H0uCP3OLBAvQW/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>can you hear me?</h4>
+                    <p>barbara boone</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>happy to be here?</h4>
+                    <p>living_with_karl</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>im sorry.</h4>
+                    <p>makeup_guru_12</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFvYm5zOW9sOXR3aHc0dGgxNWpyM21kNmg0enF3MDV0bGx3OWlieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z3ZrZyse0xFjmtYQYO/giphy.webp"
+                        alt="Video Thumbnail">
+                    <h4>stop playing dti.</h4>
+                    <p>gamer_emilio</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

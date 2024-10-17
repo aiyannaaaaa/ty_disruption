@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'roashe';
+    src: url('assets/RoashePersonalUse-jEa4M.otf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'eirene';
+    src: url('assets/EireneSans-Italic.otf') format('truetype'),
+        url('assets/EireneSans-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'eirene-head';
+    src: url('assets/EireneSans-Bold.otf') format('truetype'),
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'eirene';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #050505;
+    color: #F2F2F2;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectangle {
+    display: flex;
+    background-color: #050505;
+    border: .5px solid #F2F2F2;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 1200px;
+}
+
+.h2 {
+    font-family: 'roashe', serif;
+    padding-left: 33px;
+}
+
+.p {
+    font-size: 14px;
+    color: lightgrey;
+    font-family: 'eirene', sans-serif;
+    padding-left: 33px;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+}
+
+.link {
+    * {
+        cursor: url(https://cur.cursors-4u.net/others/oth-5/oth557.cur), auto !important;
+    }
+}
+
+.text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    * {
+        cursor: url(https://cur.cursors-4u.net/others/oth-5/oth557.cur), auto !important;
+    }
+}
+
+.popup {
+    position: absolute;
+    background-color: #050505;
+    margin: 10px;
+    padding: 20px;
+    border: .5px solid #F2F2F2;
+    z-index: 1;
+    cursor: move;
+    user-select: none;
+    width: 500px;
+    height: 280px;
+
+    * {
+        cursor: url(https://cur.cursors-4u.net/others/oth-5/oth557.cur), auto !important;
+    }
+}
+
+
+.popup h2 {
+    margin-top: 0;
+    font-family: 'roashe', serif;
+}
+
+.popup-button {
+    text-align: right;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #050505;
+    color: #F2F2F2;
+    font-size: 14px;
+    font-family: 'eirene', sans-serif;
+}
+
+.popup-button:hover {
+    background-color: #050505;
+}
+
+.popup-image {
+    transition: opacity 0.1s ease-in-out;
+}
+
+
+* {
+    cursor: url(https://cur.cursors-4u.net/others/oth-2/oth143.cur), auto !important;
+}

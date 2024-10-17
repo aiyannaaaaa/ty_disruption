@@ -1,0 +1,395 @@
+@font-face {
+    font-family: 'roashe';
+    src: url('assets/RoashePersonalUse-jEa4M.otf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'eirene';
+    src: url('assets/EireneSans-Italic.otf') format('truetype'),
+        url('assets/EireneSans-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'eirene-head';
+    src: url('assets/EireneSans-Bold.otf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'roashe', serif;
+    background-color: #050505;
+    transition: background-color 0.2s ease;
+    color: white;
+    margin: 0;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+
+h4 {
+    font-family: 'eirene-head', sans-serif;
+}
+
+p {
+    font-family: 'eirene', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #050505;
+    border-bottom: .1px solid #F2F2F2;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#search-input {
+    padding: 6px 10px;
+    outline: none;
+    transition: border 0.3s;
+    font-size: 12px;
+    width: 180px;
+    border: 2px solid #F2F2F2;
+}
+
+#search-input:focus {
+    border-color: #050505;
+}
+
+button {
+    padding: 6px 10px;
+    background-color: #F2F2F2;
+    color: #050505;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 12px;
+}
+
+.category-banner {
+    font-family: 'eirene', sans-serif;
+    font-weight: 10;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+    width: 100%;
+    font-size: 10px;
+
+}
+
+.category-banner ul {
+    display: inline-block;
+    padding: 0;
+}
+
+.category-banner li {
+    display: inline;
+    padding: 0 20px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.shorts-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.shorts-card {
+    display: inline-block;
+    min-width: 150px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #050505;
+    border: .1px solid #F2F2F2;
+    padding: 10px;
+    text-align: center;
+}
+
+.shorts-card img {
+    width: 130px;
+    height: 250px;
+}
+
+.shorts-card h4 {
+    font-size: 14px;
+    margin: 10px 0 5px;
+}
+
+.profiles-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.profile-card {
+    display: inline-block;
+    min-width: 120px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.profile-card h4 {
+    font-size: 14px;
+    margin: 5px 0 0;
+    text-align: center;
+    padding-left: 55px;
+    width: 100%;
+}
+
+.shorts-container::-webkit-scrollbar,
+.profiles-container::-webkit-scrollbar {
+    display: none;
+}
+
+.shorts-container,
+.profiles-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.video-card {
+    background-color: #050505;
+    border: .1px solid #F2F2F2;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.video-card img {
+    width: 100%;
+    height: auto;
+}
+
+.video-card h4 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.video-card p {
+    font-size: 14px;
+    color: lightgrey;
+}
+
+.hover-bg-video8 {
+    background-color: white;
+    color: #050505;
+    animation: glitch 0.5s infinite;
+}
+
+.hover-bg-video17 {
+    background-color: white;
+    color: #050505;
+    animation: glitch 0.5s infinite;
+}
+
+@keyframes slideDown {
+    0% {
+        top: -100vh;
+        opacity: 0;
+    }
+
+    100% {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+.card {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content {
+    position: relative;
+    top: -100vh;
+    animation: slideDown 1.5s forwards;
+}
+
+
+.diagonal-content {
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: -300px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.content-box img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.content-box {
+    position: absolute;
+
+    * {
+        cursor: url(https://cur.cursors-4u.net/others/oth-5/oth557.cur), auto !important;
+    }
+
+    transition: transform 0.3s ease-out;
+    user-select: none;
+}
+
+#box1,
+#box2,
+#box3,
+#box4,
+#box5,
+#box6 {
+    top: -100px;
+    left: 100px;
+    width: 300px;
+}
+
+#box1 {
+    left: -300px;
+    top: -500px;
+}
+
+#box2 {
+    left: 400px;
+    top: -500px;
+}
+
+#box3 {
+    left: 900px;
+    top: -500px;
+}
+
+#box4 {
+    left: 50px;
+    top: -500px;
+}
+
+#box5 {
+    left: 500px;
+    top: -500px;
+}
+
+#box6 {
+    left: 1100px;
+    top: -500px;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0) scale(1);
+    }
+
+    10% {
+        transform: translate(-5px, 5px) scale(1.05);
+    }
+
+    20% {
+        transform: translate(5px, -5px) scale(0.98);
+    }
+
+    30% {
+        transform: translate(-10px, 10px) scale(1.02);
+    }
+
+    40% {
+        transform: translate(10px, -10px) scale(1.03);
+    }
+
+    50% {
+        transform: translate(0px, 5px) scale(1.01);
+    }
+
+    60% {
+        transform: translate(-5px, -5px) scale(1.04);
+    }
+
+    70% {
+        transform: translate(5px, 10px) scale(0.97);
+    }
+
+    80% {
+        transform: translate(-10px, 5px) scale(1.03);
+    }
+
+    90% {
+        transform: translate(10px, -10px) scale(1.05);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+* {
+    cursor: url(https://cur.cursors-4u.net/others/oth-2/oth143.cur), auto !important;
+}
